@@ -12,6 +12,20 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/login',
+      name: 'login',
+      // eslint-disable-next-line object-curly-spacing
+      meta: {layout: 'empty'},
+      component: () => import('./views/Login.vue')
+    },
+    {
+      path: '/categories',
+      name: 'categories',
+      // eslint-disable-next-line object-curly-spacing
+      meta: {layout: 'main'},
+      component: () => import('./views/Categories.vue')
     }
   ]
 })
