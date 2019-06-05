@@ -11,6 +11,8 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      // eslint-disable-next-line object-curly-spacing
+      meta: {layout: 'main'},
       component: Home
     },
     {
@@ -26,6 +28,48 @@ export default new Router({
       // eslint-disable-next-line object-curly-spacing
       meta: {layout: 'main'},
       component: () => import('./views/Categories.vue')
+    },
+    {
+      path: '/detail-record',
+      name: 'detail-record',
+      // eslint-disable-next-line object-curly-spacing
+      meta: {layout: 'main'},
+      component: () => import('./views/DetailRecord.vue')
+    },
+    {
+      path: '/history',
+      name: 'history',
+      // eslint-disable-next-line object-curly-spacing
+      meta: {layout: 'main'},
+      component: () => import('./views/History.vue')
+    },
+    {
+      path: '/planning',
+      name: 'planning',
+      // eslint-disable-next-line object-curly-spacing
+      meta: {layout: 'main'},
+      component: () => import('./views/Planning.vue')
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      // eslint-disable-next-line object-curly-spacing
+      meta: {layout: 'main'},
+      component: () => import('./views/Profile.vue')
+    },
+    {
+      path: '/record',
+      name: 'record',
+      // eslint-disable-next-line object-curly-spacing
+      meta: {layout: 'main'},
+      component: () => import('./views/Record.vue')
+    },
+    {
+      path: '/register',
+      name: 'rregister',
+      // eslint-disable-next-line object-curly-spacing
+      meta: {layout: 'empty'},
+      component: () => import('./views/Register.vue')
     }
   ]
 })
