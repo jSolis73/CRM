@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
 
 Vue.use(Router)
 
@@ -13,7 +12,7 @@ export default new Router({
       name: 'home',
       // eslint-disable-next-line object-curly-spacing
       meta: {layout: 'main'},
-      component: Home
+      component: () => import('./views/Home.vue')
     },
     {
       path: '/login',
@@ -66,7 +65,7 @@ export default new Router({
     },
     {
       path: '/register',
-      name: 'rregister',
+      name: 'register',
       // eslint-disable-next-line object-curly-spacing
       meta: {layout: 'empty'},
       component: () => import('./views/Register.vue')
